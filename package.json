@@ -1,0 +1,20 @@
+{
+  "name": "logspout-drain",
+  "version": "0.0.0",
+  "description": "",
+  "main": "drain.js",
+  "scripts": {
+    "start": "node drain.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "split": "^0.3.2",
+    "through": "^2.3.6",
+    "superagent": "^0.21.0",
+    "logfmt": "^1.2.0",
+    "pagerduty": "0.0.3",
+    "lodash": "^2.4.1"
+  }
+}
