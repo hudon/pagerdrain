@@ -11,10 +11,11 @@ agent
   .get(uri)
   .set('Accept', 'application/json')
   .pipe(through(function(logline){
-    console.log(logline)
+    var line = logline.toString()
+    console.log(line)
     try {
       //parse json or logfmt
-      var jsonData = JSON.parse(logline.toString())
+      var jsonData = JSON.parse(line)
       if(jsonData.data[0] == '{'){
         var data = JSON.parse(jsonData.data)
       }else{
