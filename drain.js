@@ -30,7 +30,7 @@ agent
       */
 
       //http errors
-      if(data.at === 'finish' && data.status >= 400){
+      if(data.at === 'finish' && data.status > 400 && data.status != 404) {
         data.reason = 'HTTP ' + data.status + ' error detected on ' + jsonData.name + ' ' + jsonData.id
         pd.page(data)
       }
